@@ -410,9 +410,15 @@ function SelectedConsultancy() {
                               {parse(`${item.createpackage?.packageheading}`)}
                               </p>
                               {item.createpackage?.packagedescription && (
-                                <p id="uni-list-box-state">
-                                  {item.createpackage?.packagedescription}
-                                </p>
+                                <div>
+                                  <p id="uni-list-box-state2">
+                                    {item.createpackage?.packageSubheading}
+                                  </p>
+                                  <p id="uni-list-box-state">
+                                    {item.createpackage?.packagedescription}
+                                  </p>
+                                </div>
+                               
                               )}
                             </div>
                           </SwiperSlide>

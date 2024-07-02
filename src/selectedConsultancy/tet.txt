@@ -1,0 +1,72 @@
+              <Swiper
+                breakpoints={{
+                  640: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                  },
+                  768: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                  },
+                }}
+                pagination={{
+                  clickable: true,
+                }}
+                // navigation={true}
+                modules={[Pagination]}
+                className="uni-list-Swiper"
+                id={modalIsOpen ? "selected-uni-swiper" : ""}
+              >
+                {consultancypackage?.map((item, key) => {
+                  return (
+                    <div key={key}>
+                      <SwiperSlide id="uni-list-box-wraper">
+                        <div
+                          onClick={() => {
+                            openModal();
+                            setModalData(item);
+                          }}
+                          className="uni-list-box"
+                          style={{ background: `${JSON.parse(item.setting)}` }}
+                        >
+                          <p id="uni-list-box-name">
+                            {item.createpackage.heading}
+                          </p>
+                          {item.createpackage.description && (
+                            <p id="uni-list-box-state">
+                              {item.createpackage.description}
+                            </p>
+                          )}
+                          {/* {item.createpackage.totalamount && (
+                            <div style={{ display: "flex" }}>
+                              <p id="uni-list-box-state">
+                                {item.createpackage.totalamount}
+                              </p>
+                              <HiMiniCurrencyRupee
+                                // size={20}
+                                style={{
+                                  marginTop: "5px",
+                                  marginLeft: "5px",
+                                  fontSize: "20px",
+                                }}
+                              />
+                            </div>
+                          )}
+                          {item.createpackage.validaty && (
+                            <p id="uni-list-box-state">
+                              {item.createpackage.validaty} Days
+                            </p>
+                          )} */}
+
+                          {/* <p id="uni-list-box-country">{JSON.parse(item.package)[item].action}</p> */}
+                          {/* <button id="uni-list-box-link">read more</button> */}
+                        </div>
+                      </SwiperSlide>
+                    </div>
+                  );
+                })}
+              </Swiper>

@@ -1,0 +1,289 @@
+.cunsultancy_body {
+    background-color: rgb(193 193 193);
+    height: 100vh;
+    width: 100%;
+}
+
+.consultancy-menu-container {
+    /* background: #80808073; */
+    /* height: 500px; */
+    width: 90%;
+    /* margin-top: 120px; */
+    padding-top: 120px;
+    margin: 0px auto 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ConsultancyMenu-heading-container {
+    /* width: 50%;
+    background: red; */
+    /* background-color: red; */
+    /* height: 500px; */
+}
+
+#ConsultancyMenu-heading {
+    font-size: 13vw;
+    color: white;
+    font-weight: 400;
+    margin: 0px;
+    font-style: normal;
+    /* margin-top: 20px;
+    margin-bottom: -39px; */
+    text-shadow: -2px 0px 8px rgba(216, 215, 215, 0.5);
+    font-family: impact;
+}
+
+.uni-list-swipe-slider {
+    /* background: #FCEE21 !important; */
+    /* border-radius: 100px; */
+    width: 150px !important;
+    height: 300px !important;
+    /* border: 1px solid black; */
+}
+
+
+.ConsultancyMenu-sub-heading {
+    color: white;
+    /* font-size: 10rem; */
+    margin: 0px;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+    font-family: impact;
+}
+
+#subheading-one {
+
+    font-size: 5vw;
+    /* margin-top: -10px;
+    margin-bottom: 0px; */
+    color: black;
+
+}
+
+#subheading-two {
+    font-size: 5rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: black;
+
+}
+
+.uni-list-swipe {
+    /* background-color: green; */
+    height: 100%;
+    width: 50%;
+    margin-top: 50px;
+}
+
+.uni-list-swiper-container {
+    /* background-color: aqua;   */
+    height: 60%;
+    margin-top: 60px;
+    /* width: 100%; */
+}
+
+.s-card {
+    height: 300px;
+    width: 80%;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 100px;
+    /* justify-content:space-around; */
+    /* margin: 30px 0px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 8px 9px 1px #9E9E9E;
+    position: relative;
+}
+
+.s-card p {
+    font-size: 16px;
+    margin: 0px auto;
+    font-family: BKANT;
+    padding: 0px 5px;
+    text-align: center;
+    /* font-weight: 100; */
+}
+
+.swiper {
+    width: 90%;
+    height: 100%;
+    /* padding:30px 0 !important; */
+}
+.mySwiper-main{
+    padding: 30px 0 !important;
+}
+.uni-list-swipe-slider {
+    text-align: center;
+    font-size: 18px;
+    width: 200px !important;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subdiv {
+    margin-top: -30px;
+}
+
+.Menu_main_div {
+    width: 100%;
+    margin: auto;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background: greenyellow; */
+}
+
+
+#swiper-heading {
+    /* font-family: BKANT; */
+    font-family: impact;
+    font-size: 50px;
+    /* letter-spacing: 4px; */
+    /* margin-top: 30px !important; */
+    margin-bottom: 0px;
+    color: black;
+    text-align: center;
+    padding: 0px 10px;
+    /* font-weight: 500; */
+}
+
+/* .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+.indicator-icon {
+    cursor: pointer;
+}
+
+.indicator {
+    /* margin-top: 10px; */
+    /* background-color: rgb(36, 32, 32); */
+    /* width: 200px; */
+    /* height: 100px; */
+    /* justify-content: flex-end;
+    margin-right: 30px;
+    display: flex;
+    width: 100%; */
+    position: absolute;
+    right:0;
+    bottom:-40px;
+
+}
+
+.r-more {
+    display: flex;
+    justify-content: space-evenly;
+    /* background: black; */
+    /* width: 50%; */
+    padding: 5px 15px;
+    margin: 0px auto;
+    border-radius: 20px;
+    align-items: center;
+    position: absolute;
+    bottom: 30px;
+}
+
+.r-link {
+    color: black;
+    /* font-family: BKANT; */
+    font-size: 20px;
+    letter-spacing: 1px;
+    height: 100%;
+    width: 100%;
+}
+
+.r-icon {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.Slider_Outer_div{
+    width: 50%;
+    position: relative;
+    /* height: 55%; */
+}
+@media only screen and (max-width: 768px) {
+    .cunsultancy_body {
+        height: 100vh;
+    }
+
+    .Menu_main_div {
+        flex-direction: column;
+    }
+     .Slider_Outer_div{
+        width: 100%;
+     }
+    .consultancy-menu-container {
+        flex-direction: column;
+        margin-top: 0px;
+        padding-top: 0px;
+        height: 90%;
+    }
+
+    .uni-list-swipe {
+        /* background-color: green; */
+        height: 100%;
+        width: 90%;
+    }
+
+    .uni-list-swipe-slider {
+        width: 90% !important;
+        padding: 10px 15px;
+    }
+
+    #ConsultancyMenu-heading {
+        font-size: 6rem;
+    }
+
+    #subheading-one {
+        font-size: 2rem;
+    }
+
+    .consultancy-menu-container #subheading-two {
+        font-size: 3rem;
+    }
+
+    .subdiv {
+        margin-top: 0px;
+    }
+
+    .ConsultancyMenu-heading-container {
+        height: 40%;
+
+        /* margin-top: 40px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .s-card {
+        width: 60%;
+    }
+    .Menu_main_div{
+        height: 90%;
+    }
+    .uni-list-swiper-container {
+        height: 100%;
+        margin-top: 0px;
+        width: 100%;
+        position: relative;
+    }
+
+    .uni-list-swipe {
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        align-items: center;
+    }
+}

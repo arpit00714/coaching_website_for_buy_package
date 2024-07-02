@@ -1,0 +1,23 @@
+
+
+.footer{
+    background: rgb(0, 0, 0);
+    height: 0px;
+    width: 100%;
+    transition: height 1s ease-in;
+}
+.footerActive{
+    background: rgb(0, 0, 0);
+    height: 300px;
+    width: 100%;
+    transition: height 1s ease-in;
+}
+
+.Seefooterbtn{
+    padding: 10px 15px;
+    border-radius: 10px;
+    background: white;
+    border: 1px solid;
+  font-family: impact;
+  cursor: pointer;
+}

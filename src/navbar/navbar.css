@@ -1,0 +1,248 @@
+.navbar-container {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 10px;
+    align-items: center;
+}
+.mob_menu{
+    display: none;
+}
+.f-width {
+    width: 45%;
+    /* background-color: red; */
+}
+
+.navbar-link a {
+    font-family: BKANT;
+    /* text-shadow: 1px 2px 14px rgb(10 10 10 / 50%); */
+    color: black;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px 15px;
+}
+
+.navbar-link a:hover {
+    font-family: BKANT;
+    /* text-shadow: 1px 2px 14px rgb(10 10 10 / 50%); */
+    color: white;
+    font-size: 15px;
+    border: 1px solid white;
+    background-color: rgb(128 128 128 / 9%);
+    transition: color 0.2s ease-in;
+    border-radius: 10px;
+    padding: 5px 15px;
+}
+
+.navbar-container-main {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100px;
+    z-index: 999;
+    display: flex;
+    /* background: rgba(0, 0, 0, 0.247); */
+    align-items: center;
+
+}
+
+.navbar-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    /* background: url("../images/logocolour-u508906.png") center center no-repeat;
+    background-position: 40%;
+    object-fit: cover; */
+}
+
+.navbar-logo-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.Dropdown-menu{
+    background: transparent !important;
+    border-radius: 10px;
+    margin-top: 10px !important;
+     border: none !important;
+
+}
+.Dropdown-option{
+    font-family: BKANT;
+}
+.Dropdown-option.is-selected{
+    background-color: white !important;
+    color: black;
+}
+.Dropdown-option:hover {
+    background-color: white !important;
+    color: black;   
+}
+.Dropdown-placeholder{
+    font-family: BKANT !important;
+    color: black !important;
+}
+.Dropdown-control{
+border-radius: 10px !important;
+background: transparent !important;
+border: none !important;
+}
+@media screen and (max-width: 480px) {}
+
+@media screen and (min-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+}
+.toggle_mob_menu{
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .navbar-container {
+        width: 200px;
+        background: gray;
+        display: none;
+        margin-top: 0px;
+        height: 100vh;
+        margin-left: -200px;
+        transition: margin-left 0.3s ease-in;
+    }
+
+    .navbar-container-active {
+        width: 200px;
+        background: gray;
+        margin-top: 0px;
+        height: 100vh;
+        margin-left: 0px;
+        transition: margin-left 0.3s ease-in;
+    }
+
+    .navbar-container-main {
+        align-items: normal;
+        display: none;
+        background: transparent;
+    }
+
+    .mob_menu {
+        position: fixed;
+        width: 100%;
+        display: block;
+        /* background-color: red; */
+        z-index: 99;
+    }
+
+    .toggle_mob_menu {
+        width: 80%;
+        height: 100vh;
+        background-color: black;
+        position: fixed;
+        top: 0px;
+        z-index: 99;
+        margin-left: -400px;
+        transition: margin-left 0.4s ease-in;
+    }
+
+    .toggle_mob_menu_active {
+        width: 80%;
+        height: 100vh;
+        background-color: black;
+        position: fixed;
+        top: 0px;
+        z-index: 99;
+        margin-left: 0px;
+        /* margin-left: -400px; */
+        transition: margin-left 0.4s ease-in;
+    }
+
+    .Hide_mob_menu {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .mob_menu_container {
+        height: 100%;
+        width: 100%;
+    }
+
+    .mob_meu_inner_container {
+        margin-top: 50px;
+    }
+
+    .mob_logo {
+        width: 50%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mob_nav_link {
+        /* background-color: red; */
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .link {
+        display: flex;
+        justify-content: center;
+        margin: 15px 0px;
+    }
+
+    .link a {
+        color: white;
+        position: relative;
+    }
+
+    /* .link a::before{
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  height: 1px;
+  width: 100%;
+   background-color: red;
+} */
+
+    .mob_Logs {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+    }
+
+    .mob_Logs_inner {
+        width: 50%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mob_Logs_inner button {
+        padding: 5px 15px;
+        font-size: 16px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .mob_Logs_inner p {
+        color: white;
+    }
+
+
+
+
+
+
+
+
+
+
+}

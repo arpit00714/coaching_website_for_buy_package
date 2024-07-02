@@ -1,0 +1,37 @@
+.login_section{
+    /* height: 500px; */
+    width: 50%;
+    /* background-color: red; */
+    margin:10px auto;
+    /* height: 500px; */
+}
+.login_element{
+    /* background-color: red; */
+}
+.login_section_GoogleBtn{
+    background-color: #1877f2;
+    width: 100%;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px auto;
+}
+
+.loginInput{
+    width: 100%;
+    padding: 15px 10px;
+    border-radius: 10px;
+    border: none;
+    border: 1px solid ;
+    /* height: 50px; */
+}
+
+@media screen and (max-width:768px) {
+    .login_section{
+        width: 90%;
+    }
+}

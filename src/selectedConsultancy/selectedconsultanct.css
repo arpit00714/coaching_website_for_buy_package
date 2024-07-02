@@ -526,7 +526,7 @@ h5{
 .admission-process-container {
     width: 100%;
     margin: 0px auto;
-    height: auto;
+    min-height: 75vh;
     flex-direction: column;
     justify-content: center;
     display: flex;

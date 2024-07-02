@@ -425,8 +425,8 @@ function SelectedConsultancy() {
             </div>
           </section>
         )}
-
-        {consultancy?.admissionprocesstitle && (
+        
+        {(consultancy?.admissionprocesstitle || imageUrl) && (
           <div
             className="admission-process-container"
             style={{

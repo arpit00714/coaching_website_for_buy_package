@@ -24,8 +24,8 @@ function Buynow() {
   const consultancydetails = location?.state?.consultancydetails;
   const packageuniversity = location?.state?.packageuniversity;
   const [couponcode, setCouponCode] = useState("");
-  const [packageprice, setPackageparice] = useState();
-  const [disscountvalue, setdisscountvalue] = useState("");
+  const [packageprice, setPackageparice] = useState(parseInt(location?.state?.price));
+  const [disscountvalue, setdisscountvalue] = useState(0);
   const [showdisscountbtn, setShowdisscountbtn] = useState(false);
   const [disscountid, setdisscountid] = useState("");
   const [shouldNavigateBack, setShouldNavigateBack] = useState(false);
@@ -34,6 +34,7 @@ function Buynow() {
   ]);
   const [loading, setLoading] = useState(false);
   const [user, setUser] = useState(null);
+  const [finalAmount, setFinalAmount] = useState();
 
   useEffect(() => {
     if (shouldNavigateBack) {
@@ -47,7 +48,7 @@ function Buynow() {
       setUser(user);
     });
   }, []);
-
+  
   const CheckPackageCoupon = async (value) => {
     if (couponcode !== "") {
       setShowdisscountbtn(true);
@@ -56,6 +57,7 @@ function Buynow() {
         console.log("datacreatepackage");
         const response = await fetch(endpoint);
         const data = await response.json();
+       
         if (data.status === 200) {
           console.log("data.message", data.message.disscountvalue);
           if (data.message.status) {
@@ -66,20 +68,20 @@ function Buynow() {
             const discountAmount = (packageprice * discountPercentage) / 100;
             const newPrice = packageprice - discountAmount;
             console.log("newPrice", newPrice);
-            setPackageparice(newPrice);
-            setdisscountvalue(newPrice);
+            // setPackageparice(newPrice);
+            setdisscountvalue(discountAmount);
           } else {
             alert.error(`Coupon Code Expire`);
             setShowdisscountbtn(false);
           }
           //   setPackageparice()
         } else {
-          alert.error(`No Disscount for This Package`);
+          alert.error(`No Discount for This Package`);
           setShowdisscountbtn(false);
         }
         // console.log(data.message[0].createpackage, "datacreatepackage");
       } catch (err) {
-        alert.error(`No Disscount for This Package`);
+        alert.error(`No Discount for This Package`);
         setShowdisscountbtn(false);
         console.log(err);
       }
@@ -87,6 +89,9 @@ function Buynow() {
       alert.error("please add Coupon Code");
     }
   };
+  useEffect(() => {
+    setFinalAmount(packageprice - disscountvalue)
+  }, [CheckPackageCoupon])
 
   const handlePaymentResponse = async (response) => {
     try {
@@ -126,10 +131,15 @@ function Buynow() {
   const HandlePackageBuy = async () => {
     try {
       setLoading(true);
+      let my_final_amount = packageprice - disscountvalue
+      if (my_final_amount == 0) { 
+        my_final_amount=1
+      }
       const send = {
-        amount: packageprice,
+        amount: my_final_amount,
         currency: "INR",
       };
+      console.log(send,"SEND")
       const response = await RazorPay({ send });
       const data = await response.json();
       console.log("data", data);
@@ -157,6 +167,11 @@ function Buynow() {
         },
         theme: {
           color: "#3399cc",
+        }, modal: {
+          ondismiss: function () {
+            
+            window.location.reload()
+          },
         },
       };
 
@@ -273,21 +288,21 @@ function Buynow() {
           </div>
         </div>
         <div style={{ display: "flex", alignItems: "center" }}>
-          <p style={{ fontFamily: "BKANT" }}>Original Price: </p>
+          <p style={{ fontFamily: "BKANT", marginRight: 5 }}>Original Price :Rs</p>
           <p style={{ fontFamily: "BKANT", fontSize: "16px" }}>
             {packagedetails?.packageamount}
           </p>
         </div>
         <div style={{ display: "flex", alignItems: "center" }}>
-          <p style={{ fontFamily: "BKANT" }}>Disscount :</p>
+          <p style={{ fontFamily: "BKANT", marginRight: 5 }}>Discounted Value : Rs</p>
           <p style={{ fontFamily: "BKANT", fontSize: "16px" }}>
-            {packageprice}
+            {disscountvalue}
           </p>
         </div>
         <div style={{ display: "flex", alignItems: "center" }}>
-          <p style={{ fontFamily: "BKANT" }}>After Affected Disscount</p>
+          <p style={{ fontFamily: "BKANT",marginRight:5 }}>Final Price : Rs</p>
           <p style={{ fontFamily: "BKANT", fontSize: "16px" }}>
-            {disscountvalue}
+            {finalAmount}
           </p>
         </div>
 
